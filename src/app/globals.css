@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/fonts/helveticaneue.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.animate-blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-gradient {
+    background: linear-gradient(90deg, #14b8a6, #4f46e5, #22d3ee, #818cf8);
+    background-size: 400% 400%;
+    animation: gradient 4s ease infinite;
+}
+
+.mask-gradient {
+    mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
